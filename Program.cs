@@ -6,7 +6,9 @@ namespace csharpdelegate
     {
         // define a public delegate
         public delegate int Calculate(int x, int y);
-        public delegate void Del();
+        //public delegate void Del();
+        // using build-in delegate type instead
+        public Action del { get; set; }
 
         // define some method that can be invoke by delegate instance
         public int Add(int x, int y) 
@@ -33,10 +35,10 @@ namespace csharpdelegate
 
         public void Multicast()
         {
-            Del d = MethodOne;
-            d += MethodTwo;
-            Console.WriteLine("Get invocation list {0}", d.GetInvocationList().GetLength(0));
-            d();
+            del = MethodOne;
+            del += MethodTwo;
+            Console.WriteLine("Get invocation list {0}", del.GetInvocationList().GetLength(0));
+            del();
         }
 
         static void Main(string[] args)
