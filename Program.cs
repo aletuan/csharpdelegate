@@ -33,6 +33,18 @@ namespace csharpdelegate
             Console.WriteLine("MethodTwo");
         }
 
+        // apply pub-sub pattern, raise event to delegate handler
+        public void Raise()
+        {
+            if (del != null)
+            {
+                del();
+            } else 
+            {
+                Console.WriteLine("del is null");
+            }
+        }
+
         public void Multicast()
         {
             //del = MethodOne;
@@ -40,14 +52,14 @@ namespace csharpdelegate
             // Using lambda expression for convenient
             del = () => Console.WriteLine("MethodOne");
             del += () => Console.WriteLine("MethodTwo");
-            Console.WriteLine("Get invocation list {0}", del.GetInvocationList().GetLength(0));
-            del();
+            //Console.WriteLine("Get invocation list {0}", del.GetInvocationList().GetLength(0));
+            //del();
         }
 
         static void Main(string[] args)
         {
             Program main = new Program();
-            main.Multicast();
+            main.Raise();
         }
     }
 }
