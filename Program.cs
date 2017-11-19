@@ -67,6 +67,7 @@ namespace csharpdelegate
             //del += MethodTwo;
             // Using lambda expression for convenient
             del = (sender, e) => Console.WriteLine("MethodOne {0} {1}", sender, e.Value);
+            del += (sender, e) => throw new Exception();
             del += (sender, e) => Console.WriteLine("MethodTwo {0} {1}",sender, e.Value);
             //Console.WriteLine("Get invocation list {0}", del.GetInvocationList().GetLength(0));
             //del();
