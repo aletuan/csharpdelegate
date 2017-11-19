@@ -35,8 +35,11 @@ namespace csharpdelegate
 
         public void Multicast()
         {
-            del = MethodOne;
-            del += MethodTwo;
+            //del = MethodOne;
+            //del += MethodTwo;
+            // Using lambda expression for convenient
+            del = () => Console.WriteLine("MethodOne");
+            del += () => Console.WriteLine("MethodTwo");
             Console.WriteLine("Get invocation list {0}", del.GetInvocationList().GetLength(0));
             del();
         }
