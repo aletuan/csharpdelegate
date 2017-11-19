@@ -1,0 +1,10 @@
+/Users/tuananhle/Documents/GitHub/csharpdelegate/bin/Debug/netcoreapp2.0/csharpdelegate.deps.json
+/Users/tuananhle/Documents/GitHub/csharpdelegate/bin/Debug/netcoreapp2.0/csharpdelegate.runtimeconfig.json
+/Users/tuananhle/Documents/GitHub/csharpdelegate/bin/Debug/netcoreapp2.0/csharpdelegate.runtimeconfig.dev.json
+/Users/tuananhle/Documents/GitHub/csharpdelegate/bin/Debug/netcoreapp2.0/csharpdelegate.dll
+/Users/tuananhle/Documents/GitHub/csharpdelegate/bin/Debug/netcoreapp2.0/csharpdelegate.pdb
+/Users/tuananhle/Documents/GitHub/csharpdelegate/obj/Debug/netcoreapp2.0/csharpdelegate.csproj.CoreCompileInputs.cache
+/Users/tuananhle/Documents/GitHub/csharpdelegate/obj/Debug/netcoreapp2.0/csharpdelegate.AssemblyInfoInputs.cache
+/Users/tuananhle/Documents/GitHub/csharpdelegate/obj/Debug/netcoreapp2.0/csharpdelegate.AssemblyInfo.cs
+/Users/tuananhle/Documents/GitHub/csharpdelegate/obj/Debug/netcoreapp2.0/csharpdelegate.dll
+/Users/tuananhle/Documents/GitHub/csharpdelegate/obj/Debug/netcoreapp2.0/csharpdelegate.pdb
