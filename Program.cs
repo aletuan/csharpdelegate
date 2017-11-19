@@ -59,6 +59,8 @@ namespace csharpdelegate
         static void Main(string[] args)
         {
             Program main = new Program();
+            // init delegate handle
+            main.Multicast();
             main.Raise();
         }
     }
