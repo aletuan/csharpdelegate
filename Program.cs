@@ -8,7 +8,9 @@ namespace csharpdelegate
         public delegate int Calculate(int x, int y);
         //public delegate void Del();
         // using build-in delegate type instead
-        public Action del { get; set; }
+        //public Action del { get; set; }
+        // turn public properties into public field to avoid some constraints
+        public event Action del = delegate { };
 
         // define some method that can be invoke by delegate instance
         public int Add(int x, int y) 
@@ -36,6 +38,7 @@ namespace csharpdelegate
         // apply pub-sub pattern, raise event to delegate handler
         public void Raise()
         {
+            /*
             if (del != null)
             {
                 del();
@@ -43,6 +46,8 @@ namespace csharpdelegate
             {
                 Console.WriteLine("del is null");
             }
+            */
+            del();
         }
 
         public void Multicast()
