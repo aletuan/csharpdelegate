@@ -2,6 +2,15 @@
 
 namespace csharpdelegate
 {
+    public class MyArgs : EventArgs
+    {
+        public MyArgs(int val)
+        {
+            Value = val;
+        }
+
+        public int Value { get;set;}
+    }
     class Program
     {
         // define a public delegate
@@ -10,7 +19,9 @@ namespace csharpdelegate
         // using build-in delegate type instead
         //public Action del { get; set; }
         // turn public properties into public field to avoid some constraints
-        public event Action del = delegate { };
+        //public event Action del = delegate { };
+        // more improve
+        public event EventHandler<MyArgs> del = delegate {};
 
         // define some method that can be invoke by delegate instance
         public int Add(int x, int y) 
@@ -47,7 +58,7 @@ namespace csharpdelegate
                 Console.WriteLine("del is null");
             }
             */
-            del();
+            del(this, new MyArgs(42));
         }
 
         public void Multicast()
@@ -55,8 +66,8 @@ namespace csharpdelegate
             //del = MethodOne;
             //del += MethodTwo;
             // Using lambda expression for convenient
-            del = () => Console.WriteLine("MethodOne");
-            del += () => Console.WriteLine("MethodTwo");
+            del = (sender, e) => Console.WriteLine("MethodOne {0} {1}", sender, e.Value);
+            del += (sender, e) => Console.WriteLine("MethodTwo {0} {1}",sender, e.Value);
             //Console.WriteLine("Get invocation list {0}", del.GetInvocationList().GetLength(0));
             //del();
         }
